@@ -1,9 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=fallback');
-    @import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=fallback');
-
     :root {
         --primary-color: hsl(167deg 36% 54%);
         --primary-dark-blue: hsl(205deg 41% 21%);
