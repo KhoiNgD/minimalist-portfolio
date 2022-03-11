@@ -2,31 +2,32 @@ import Container from "components/Container/Container";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const navLinks = [
-  { name: "home", path: "/home" },
-  { name: "portfolio", path: "/portfolio" },
-  { name: "contact me", path: "/contact me" },
-];
+type Props = { navLinks: { name: string; path: string }[] };
 
-const Header = () => {
+const Header = ({ navLinks }: Props) => {
   return (
-    <Container tag="header">
+    <Wrapper tag="header">
       <Link to="/">
         <img src="assets/logo.svg" alt="portfolio logo" />
       </Link>
 
-      <Wrapper>
+      <NavLinkWrapper>
         {navLinks.map(({ path, name }) => (
           <StyledNavLink to={path} key={path}>
             {name}
           </StyledNavLink>
         ))}
-      </Wrapper>
-    </Container>
+      </NavLinkWrapper>
+    </Wrapper>
   );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled(Container)`
+  display: flex;
+  align-items: center;
+`;
+
+const NavLinkWrapper = styled.nav`
   display: flex;
   gap: 42px;
   margin-left: auto;
