@@ -1,6 +1,10 @@
-import Container from "components/Container/Container";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
+import Container from "components/Container/Container";
+import logo from "assets/logo.svg";
+import githubSvg from "assets/icons/github.svg";
+import twitterSvg from "assets/icons/twitter.svg";
+import linkedinSvg from "assets/icons/linkedin.svg";
 
 type Props = { navLinks: { name: string; path: string }[] };
 
@@ -10,7 +14,7 @@ const Footer = ({ navLinks }: Props) => {
       <ContainerWrapper tag={"footer"}>
         <NavWrapper>
           <Link to="/">
-            <img src="assets/logo.svg" alt="portfolio logo" />
+            <img src={logo} alt="portfolio logo" />
           </Link>
 
           <LinkWrapper>
@@ -23,9 +27,9 @@ const Footer = ({ navLinks }: Props) => {
         </NavWrapper>
 
         <ContactWrapper>
-          <img src="assets/icons/github.svg" alt="github logo" />
-          <img src="assets/icons/twitter.svg" alt="twitter logo" />
-          <img src="assets/icons/linkedin.svg" alt="linkedin logo" />
+          <img src={githubSvg} alt="github logo" />
+          <img src={twitterSvg} alt="twitter logo" />
+          <img src={linkedinSvg} alt="linkedin logo" />
         </ContactWrapper>
       </ContainerWrapper>
     </Wrapper>

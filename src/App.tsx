@@ -11,13 +11,13 @@ function App() {
   ];
 
   return (
-    <>
+    <div>
       <Header navLinks={navLinks} />
       <Outlet />
       <Footer navLinks={navLinks} />
 
       <GlobalStyles />
-    </>
+    </div>
   );
 }
 

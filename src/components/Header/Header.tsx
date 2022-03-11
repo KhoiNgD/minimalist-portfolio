@@ -1,6 +1,7 @@
-import Container from "components/Container/Container";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
+import Container from "components/Container/Container";
+import logo from "assets/logo.svg";
 
 type Props = { navLinks: { name: string; path: string }[] };
 
@@ -8,7 +9,7 @@ const Header = ({ navLinks }: Props) => {
   return (
     <Wrapper tag="header">
       <Link to="/">
-        <img src="assets/logo.svg" alt="portfolio logo" />
+        <img src={logo} alt="portfolio logo" />
       </Link>
 
       <NavLinkWrapper>
