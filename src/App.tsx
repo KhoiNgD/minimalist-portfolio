@@ -5,9 +5,9 @@ import GlobalStyles from "./components/GlobalStyles/GlobalStyles";
 
 function App() {
   const navLinks = [
-    { name: "home", path: "/home" },
+    { name: "home", path: "/" },
     { name: "portfolio", path: "/portfolio" },
-    { name: "contact me", path: "/contact me" },
+    { name: "contact me", path: "/contactme" },
   ];
 
   return (

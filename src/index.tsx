@@ -6,12 +6,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Portfolio from "pages/Portfolio/Portfolio";
 import ContactMe from "pages/ContactMe/ContactMe";
+import Home from "pages/Home/Home";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
+          <Route path="" element={<Home />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="contactme" element={<ContactMe />} />
         </Route>
