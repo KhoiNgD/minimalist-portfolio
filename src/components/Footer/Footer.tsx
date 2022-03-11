@@ -1,10 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Container from "components/Container/Container";
-import logo from "assets/logo.svg";
-import githubSvg from "assets/icons/github.svg";
-import twitterSvg from "assets/icons/twitter.svg";
-import linkedinSvg from "assets/icons/linkedin.svg";
+import { ReactComponent as Logo } from "assets/logo.svg";
+import { ReactComponent as GithubLogo } from "assets/icons/github.svg";
+import { ReactComponent as TwitterLogo } from "assets/icons/twitter.svg";
+import { ReactComponent as LinkedinLogo } from "assets/icons/linkedin.svg";
 
 type Props = { navLinks: { name: string; path: string }[] };
 
@@ -14,7 +14,8 @@ const Footer = ({ navLinks }: Props) => {
       <ContainerWrapper tag={"footer"}>
         <NavWrapper>
           <Link to="/">
-            <img src={logo} alt="portfolio logo" />
+            {/* <img src={logo} alt="portfolio logo" /> */}
+            <LogoSvg />
           </Link>
 
           <LinkWrapper>
@@ -27,9 +28,9 @@ const Footer = ({ navLinks }: Props) => {
         </NavWrapper>
 
         <ContactWrapper>
-          <img src={githubSvg} alt="github logo" />
-          <img src={twitterSvg} alt="twitter logo" />
-          <img src={linkedinSvg} alt="linkedin logo" />
+          <GithubLogo />
+          <TwitterLogo />
+          <LinkedinLogo />
         </ContactWrapper>
       </ContainerWrapper>
     </Wrapper>
@@ -45,6 +46,10 @@ const ContainerWrapper = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  & > * {
+    cursor: pointer;
+  }
 `;
 
 const NavWrapper = styled.nav`
@@ -60,14 +65,26 @@ const LinkWrapper = styled.div`
 
 const ContactWrapper = styled.div`
   display: flex;
+  align-items: center;
   gap: 16px;
+
+  & path {
+    fill: #fff;
+  }
 `;
 
 const StyledNavLink = styled(NavLink)`
   font-size: 1.2rem;
   text-transform: uppercase;
+  text-decoration: none;
   color: #fff;
-  letter-spacing: 12px;
+  letter-spacing: 2px;
+`;
+
+const LogoSvg = styled(Logo)`
+  & > * {
+    fill: #fff;
+  }
 `;
 
 export default Footer;

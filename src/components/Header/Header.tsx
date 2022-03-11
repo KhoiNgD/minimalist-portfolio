@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Container from "components/Container/Container";
-import logo from "assets/logo.svg";
+import { ReactComponent as Logo } from "assets/logo.svg";
 
 type Props = { navLinks: { name: string; path: string }[] };
 
@@ -9,7 +9,7 @@ const Header = ({ navLinks }: Props) => {
   return (
     <Wrapper tag="header">
       <Link to="/">
-        <img src={logo} alt="portfolio logo" />
+        <Logo />
       </Link>
 
       <NavLinkWrapper>
@@ -41,6 +41,7 @@ const StyledNavLink = styled(NavLink)`
           isActive ? "var(--primary-color)" : "var(--primary-grayish-dark-blue)"
       : "var(--primary-grayish-dark-blue)"};
   text-transform: uppercase;
+  text-decoration: none;
   font-size: 1.2rem;
   letter-spacing: 2px;
 `;
