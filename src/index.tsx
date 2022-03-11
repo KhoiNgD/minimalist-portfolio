@@ -5,7 +5,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Portfolio from "pages/Portfolio/Portfolio";
-import AboutMe from "pages/AboutMe/AboutMe";
+import ContactMe from "pages/ContactMe/ContactMe";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,7 +13,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="portfolio" element={<Portfolio />} />
-          <Route path="aboutme" element={<AboutMe />} />
+          <Route path="contactme" element={<ContactMe />} />
         </Route>
       </Routes>
     </BrowserRouter>
