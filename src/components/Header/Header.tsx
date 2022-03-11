@@ -26,6 +26,8 @@ const Header = ({ navLinks }: Props) => {
 const Wrapper = styled(Container)`
   display: flex;
   align-items: center;
+  padding-top: 64px;
+  padding-bottom: 54px;
 `;
 
 const NavLinkWrapper = styled.nav`
