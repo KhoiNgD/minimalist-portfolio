@@ -37,15 +37,15 @@ const NavLinkWrapper = styled.nav`
 `;
 
 const StyledNavLink = styled(NavLink)`
-  color: ${(props) =>
-    props.style
-      ? (isActive) =>
-          isActive ? "var(--primary-color)" : "var(--primary-grayish-dark-blue)"
-      : "var(--primary-grayish-dark-blue)"};
+  color: var(--primary-grayish-dark-blue);
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.2rem;
   letter-spacing: 2px;
+
+  &.active {
+    color: var(--primary-color);
+  }
 `;
 
 export default Header;
