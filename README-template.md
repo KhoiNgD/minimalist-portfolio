@@ -65,21 +65,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use isActive prop inside styled component and using CSS variables
-
-```jsx
-const StyledNavLink = styled(NavLink)`
-  color: ${(props) =>
-    props.style
-      ? (isActive) =>
-          isActive ? "var(--primary-color)" : "var(--primary-grayish-dark-blue)"
-      : "var(--primary-grayish-dark-blue)"};
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-`;
-```
-
 Apply compound component style by passing className in styled components
 
 ```js
@@ -106,7 +91,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Styled components React router v6](https://stackoverflow.com/questions/70119441/styled-components-react-router-v6) - This helped me for combining react rounter isActive prop with styled components
 - [Style compound components](https://styled-components.com/docs/basics#styling-any-component) - This helped me for styling compound component instead of creating new component.
 
 ## Author

@@ -13,7 +13,7 @@ import { SecondaryButton } from "components/Buttons";
 function AboutMe() {
   return (
     <Wrapper tag="section">
-      <ResponsiveImage
+      <NotShrinkImage
         desktopSrc={desktopSrc}
         desktopSrc2x={desktopSrc2x}
         tabletSrc={tabletSrc}
@@ -22,7 +22,6 @@ function AboutMe() {
         mobileSrc2x={mobileSrc2x}
         alt="author of the website"
       />
-      <Grow grow={1.5} />
       <Content>
         <SecondaryHeading>About Me</SecondaryHeading>
 
@@ -38,7 +37,6 @@ function AboutMe() {
         </Bio>
         <Button>Go to portfolio</Button>
       </Content>
-      <Grow grow={1} />
     </Wrapper>
   );
 }
@@ -48,7 +46,12 @@ const Wrapper = styled(Container)`
   display: flex;
 `;
 
+const NotShrinkImage = styled(ResponsiveImage)`
+  flex-shrink: 0;
+`;
+
 const Content = styled.div`
+  margin-left: 125px;
   border-top: 1px solid var(--secondary-text-field);
   border-bottom: 1px solid var(--secondary-text-field);
   display: flex;
@@ -69,14 +72,6 @@ const Bio = styled.p`
 const Button = styled(SecondaryButton)`
   background: #fff;
   align-self: baseline;
-`;
-
-interface IGrow {
-  grow: number;
-}
-
-const Grow = styled.div<IGrow>`
-  flex: ${(props) => props.grow};
 `;
 
 export default AboutMe;
