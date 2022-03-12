@@ -49,8 +49,8 @@ const Wrapper = styled(Container)`
 `;
 
 const Content = styled.div`
-  border-top: 1px solid #979797;
-  border-bottom: 1px solid #979797;
+  border-top: 1px solid var(--secondary-text-field);
+  border-bottom: 1px solid var(--secondary-text-field);
   display: flex;
   flex-direction: column;
   justify-content: center;

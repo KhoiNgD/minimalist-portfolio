@@ -5,35 +5,47 @@ import { ReactComponent as Logo } from "assets/logo.svg";
 import { ReactComponent as GithubLogo } from "assets/icons/github.svg";
 import { ReactComponent as TwitterLogo } from "assets/icons/twitter.svg";
 import { ReactComponent as LinkedinLogo } from "assets/icons/linkedin.svg";
+import { SecondaryHeading } from "components/Headings";
+import { SecondaryButton } from "components/Buttons";
 
 type Props = { navLinks: { name: string; path: string }[] };
 
 const Footer = ({ navLinks }: Props) => {
   return (
-    <Wrapper>
-      <ContainerWrapper tag={"footer"}>
-        <NavWrapper>
-          <Link to="/">
-            {/* <img src={logo} alt="portfolio logo" /> */}
-            <LogoSvg />
-          </Link>
+    <>
+      <ContactMeContainer tag="div">
+        <InterestedHeading>
+          Interested in doing a project together?
+        </InterestedHeading>
+        <Border />
+        <SecondaryButton>Contact Me</SecondaryButton>
+      </ContactMeContainer>
 
-          <LinkWrapper>
-            {navLinks.map(({ path, name }) => (
-              <StyledNavLink to={path} key={path}>
-                {name}
-              </StyledNavLink>
-            ))}
-          </LinkWrapper>
-        </NavWrapper>
+      <Wrapper>
+        <ContainerWrapper tag={"footer"}>
+          <NavWrapper>
+            <Link to="/">
+              {/* <img src={logo} alt="portfolio logo" /> */}
+              <LogoSvg />
+            </Link>
 
-        <ContactWrapper>
-          <GithubLogo />
-          <TwitterLogo />
-          <LinkedinLogo />
-        </ContactWrapper>
-      </ContainerWrapper>
-    </Wrapper>
+            <LinkWrapper>
+              {navLinks.map(({ path, name }) => (
+                <StyledNavLink to={path} key={path}>
+                  {name}
+                </StyledNavLink>
+              ))}
+            </LinkWrapper>
+          </NavWrapper>
+
+          <ContactWrapper>
+            <GithubLogo />
+            <TwitterLogo />
+            <LinkedinLogo />
+          </ContactWrapper>
+        </ContainerWrapper>
+      </Wrapper>
+    </>
   );
 };
 
@@ -41,6 +53,23 @@ const Wrapper = styled.div`
   background: var(--primary-grayish-dark-blue);
   padding: 28px 0;
   margin-top: 150px;
+`;
+
+const ContactMeContainer = styled(Container)`
+  margin-top: 150px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+`;
+
+const Border = styled.div`
+  flex: 1;
+  height: 1px;
+  background: var(--secondary-text-field);
+`;
+
+const InterestedHeading = styled(SecondaryHeading)`
+  width: 340px;
 `;
 
 const ContainerWrapper = styled(Container)`
