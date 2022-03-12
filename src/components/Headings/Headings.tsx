@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const PrimaryHeading = styled.h1`
+  color: var(--primary-grayish-dark-blue);
   font-family: "Ibarra Real Nova", serif;
   font-size: 5rem;
   line-height: 50px;
@@ -8,6 +9,7 @@ const PrimaryHeading = styled.h1`
 `;
 
 const SecondaryHeading = styled.h2`
+  color: var(--primary-grayish-dark-blue);
   font-family: "Ibarra Real Nova", serif;
   font-size: 4rem;
   line-height: 42px;
@@ -15,6 +17,7 @@ const SecondaryHeading = styled.h2`
 `;
 
 const Tertiary = styled.h3`
+  color: var(--primary-grayish-dark-blue);
   font-family: "Ibarra Real Nova", serif;
   font-weight: 400;
   font-size: 3.2rem;
