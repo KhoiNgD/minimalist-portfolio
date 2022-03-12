@@ -28,6 +28,7 @@ const PrimaryButton: React.FC = ({ children }) => {
 const SecondaryButton = styled(Button)`
   color: var(--primary-grayish-dark-blue);
   border: 1px solid var(--primary-grayish-dark-blue);
+  background: #fff;
 
   &:hover {
     color: #fff;

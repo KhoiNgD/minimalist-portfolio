@@ -80,6 +80,20 @@ const StyledNavLink = styled(NavLink)`
 `;
 ```
 
+Apply compound component style by passing className in styled components
+
+```js
+type Props = { className?: string, tag: ElementType, children: ReactNode };
+
+function Container({ className, tag, children }: Props) {
+  return (
+    <Wrapper className={className} as={tag}>
+      {children}
+    </Wrapper>
+  );
+}
+```
+
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
 **Note: Delete this note and the content within this section and replace with your own learnings.**
@@ -92,10 +106,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Styled components React router v6](https://stackoverflow.com/questions/70119441/styled-components-react-router-v6) - This helped me for access to isActive prop in styled components.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Styled components React router v6](https://stackoverflow.com/questions/70119441/styled-components-react-router-v6) - This helped me for combining react rounter isActive prop with styled components
+- [Style compound components](https://styled-components.com/docs/basics#styling-any-component) - This helped me for styling compound component instead of creating new component.
 
 ## Author
 

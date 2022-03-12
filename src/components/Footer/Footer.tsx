@@ -40,6 +40,7 @@ const Footer = ({ navLinks }: Props) => {
 const Wrapper = styled.div`
   background: var(--primary-grayish-dark-blue);
   padding: 28px 0;
+  margin-top: 150px;
 `;
 
 const ContainerWrapper = styled(Container)`
